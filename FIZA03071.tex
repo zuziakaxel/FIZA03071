@@ -1,0 +1,196 @@
+\documentclass{article}
+
+%-------------------------%
+% PREAMBUŁA --------------%
+%-------------------------%
+\usepackage[utf8]{inputenc}
+\usepackage[OT4]{polski}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{tabularx}
+%\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{graphicx}
+%\usepackage{color}
+%\usepackage{epstopdf}
+\usepackage{fancyhdr}
+\usepackage[justification=centering]{caption}
+\usepackage[margin=60pt]{geometry}
+
+
+
+%------- Typy kolumn do ustawiania szerokości ------- %
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\renewcommand{\arraystretch}{1.3}
+
+
+
+
+
+
+
+\begin{document}
+
+%-------------------------%
+%Tabela nagłówkowa -------%
+%-------------------------%
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\begin{tabular}[c]{@{}l@{}}
+Wydział:\\ WFiIS\end{tabular} &
+\multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}
+Imię i nazwisko:\\ 1. Axel Zuziak\\ 2. Marcin Węglarz \end{tabular}} 
+& Rok \textbf{II}         
+& Grupa \textbf{02}          
+& Zespół \textbf{03}      \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}
+PRACOWNIA\\ FIZYCZNA \\ WFiIS AGH\end{tabular}} &
+\multicolumn{4}{l|}{ Temat:\textbf{ Dyfrakcja światła.} }                                                                                                                       & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}
+Nr ćwiczenia\\ \textbf{71}
+\end{tabular}} \\ \hline
+\begin{tabular}[c]{@{}c@{}}
+Data wykonania:\\ 22.04.2015
+\end{tabular} &
+\begin{tabular}[c]{@{}c@{}}
+ Data oddania:\\ 29.04.2015
+\end{tabular} &
+\begin{tabular}[c]{@{}c@{}}
+Zwrot do poprawy: \\ 
+\end{tabular}                                 
+& 
+\begin{tabular}[c]{@{}c@{}}
+Data oddania: \\ 
+\end{tabular}&
+\begin{tabular}[c]{@{}c@{}}
+Data zaliczenia:\\
+\end{tabular}& 
+\begin{tabular}[c]{@{}c@{}}
+OCENA:\\
+\end{tabular}       
+\\ & & & & & \\ \hline
+\end{tabular}
+\end{table}
+%-----Koniec tabeli------
+\begin{abstract}
+	W ćwiczeniu badano dyfrakcję monochromatycznego światła laserowego o długości fali 650 nm na szczelinach podwójnej oraz pojedynczej. Przy pomocy fotodiody jako detektora natężenia światła mierzono natężenie światła padającego na ekran. Poprzez wyznaczenie odległości pomiędzy kolejnymi maksimami natężenia oraz poprzez zmierzenie odległości szczelin od ekranu wyznaczono  szerokość szczelin oraz dla przypadku dwóch szczelin odległość między ich środkami. 
+\end{abstract}
+
+\section{Wstęp}
+Zarówno zjawisko dyfrakcji jak i interferencji są przykładami na falowy charakter światła. O zjawisku interferencji mówimy w przypadku dwóch szczelin dla których ich szerokość $a<<\lambda$, gdzie $\lambda$ jest długością fali padającej. Jeżeli rozpatrzymy dowolny punkt $P$ na ekranie i będziemy chcieli policzyć dla niego wypadkową amplitudę fali padającej będziemy musieli dodać do siebie fale padające z różnych szczelin. Schematycznie problem ten pokazano na Rysunku \ref{schemat_interferencja}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/interferencja.png}
+	\caption{Schemat interferencji światła na dwóch szczelinach odległych od siebie o $b$.\cite{1}}
+	\label{schemat_interferencja}
+\end{figure}
+Jak łatwo zauważyć na pomocniczym rysunku droga optyczna światła od szczeliny do punktu $P$ jest różna dla każdej ze szczelin. Konsekwencją tego faktu jest przesunięcie fazowe pomiędzy falami w punkcie $P$. \\
+Przesunięcie fazowe, które oznaczmy przez $\varphi$, jest związane z kątem $\theta$ pod jakim obserwujemy punkt $P$ na ekranie, oraz odległością $b$ między szczelinami (Rysunek \ref{schemat_interferencja}) zależnością\cite{1}:
+\begin{equation}
+\varphi = \frac{2\pi}{\lambda}b \sin \theta
+\label{wz_fi}
+\end{equation}
+Fala wypadkowa w punkcie $P$ wynosi:\\
+$E=E_0\sin \omega t +E_0\sin (\omega t + \varphi)$\\\\
+Korzystając z zależności trygonometrycznych można powyższe równanie przekształcić do postaci\cite{1}:\\\\
+$E=[2E_0\cos (\varphi/2)]\sin(\omega t + \beta)$\\\\
+Gdzie $\beta$ oraz $E_0$ są pewnymi stałymi. Natężenie światła jest proporcjonalne do kwadratu wypadkowej amplitudy drgań stąd:\\
+$I\propto \cos ^2 \Big(\frac{\varphi}{2}\Big)$\\\\
+Dodatkowo jeżeli odległość ekranu od szczelin jest duża w porównaniu do wymiarów obrazu na ekranie możemy przyjąć, że $\sin\theta \approx x/L$ ostatecznie wzór na natężenie przepiszemy w postaci:\\
+\begin{equation}
+I_{int}(x) = I_0\cos ^2 \Big(\frac{\pi bx}{L\lambda}\Big)
+\label{wz_natezenie_interferencja}
+\end{equation}
+Z powyższego wzoru bezpośredio wynika, że maksima natężenie będą występowały dla punktów o współrzędnych:\\
+$x_m = \frac{m\lambda L}{b}\ \ \ ,m=1,2,3,...$\\
+oraz będą sobie równe (Rysunek \ref{rysunki_prazkow}a).\\
+
+W rzeczywistym eksperymencie trudno jest uzyskać szerokość szczeliny o szerokości znacznie mniejszej od długości fali i obserwujemy zjawisko dyfrakcji. Chcąc rozpatrzyć dyfrakcję na pojedynczej szczelinie o szerokości $a$ musimy podzielić ją na $n$ odcinków i policzyć superpozycję drgań padających z każdego z tych odcinków (przy założeniu że długość odcinków dąży do zera). Dalsze wyprowadzenie można poprowadzić na przykład przedstawiając zaburzenia od poszczególnych fragmentów szczeliny w postaci wektorów przesuniętych w fazie o stały czynnik. Superpozycja takich zaburzeń jest więc sumą tych wektorów. Powyższe rozumowanie zostało przedstawione krok po kroku w podręczniku \cite{5}. Ostatecznie otrzymujemy (przy ponownym założeniu że odleglość od ekranu jest znacznie większa od rozmiarów obrazu)\cite{1}:
+\begin{equation}
+I_{dyf}(x) = I_0\Big(\frac{\sin \alpha}{\alpha}\Big)^2\text{  \hspace{0.1cm} ,gdzie   \hspace{0.1cm}} \alpha=\frac{\pi a}{\lambda}\sin\theta \cong \frac{\pi a x}{\lambda L}
+\label{wz_natezenie_dyfrakcyjne}
+\end{equation}\\\\
+
+W przypadku doświadczenia z jedną szczeliną będziemy wykorzystywać wzór (\ref{wz_natezenie_dyfrakcyjne}), dla doświadczenia z dwoma szczelinami końcowy efekt będzie złożeniem dwóch przedstawionych powyżej. Schemat natężenia światła na ekranie dla poszczególnych sytuacji przedstawia Rysunek \ref{rysunki_prazkow}. Ilościowo wartość natężenia dla interferencji fal światła na dwóch szczelinach o szerokości $a$ przedstawia wzór:
+\begin{equation}
+\begin{cases}
+I(x) = I_0\Big(\frac{\sin \alpha}{\alpha}\Big)^2(\cos \beta)^2   \\
+\beta \cong \frac{\pi b x}{\lambda L}\\
+\alpha \cong \frac{\pi a x}{\lambda L}
+\end{cases}
+\end{equation}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/prazki.png}
+	\caption{Wykres natężenia światła na ekranie dla \textbf{a)} interferencji przy zachowaniu warunku $a<<\lambda$, \textbf{b)} dyfrakcji na pojedynczej szczelinie o szerokości $a$ oraz \textbf{c)} złożenie poprzednich zjawisk, interferencja fali padającej z dwóch szczelin o szerekości $a$ każda.\cite{1}}
+	\label{rysunki_prazkow}
+\end{figure}
+
+
+\section{Aparatura}
+\begin{itemize}
+	\item \textbf{Woltomierz cyfrowy} - \textit{"Digital voltometer type v542.1"}. Napięcie mierzono na zakresie $10$ V. % dopisz proszę prawdziwe zakresy
+	\item \textbf{Multimetr AXIO Met Ax-582}
+	\item \textbf{Ogniwo monokrystaliczne} o powierzchni $S=63 \text{cm}^2$ i jednej sekcji.
+	\item \textbf{Ogniwo krzemowo amorficzne} o powierzchni $S=55 \text{cm}^2$ i czternastu sekcjach.
+	\item \textbf{Ogniwo polikryształowe} o powierzchni $S=78 \text{cm}^2$ i ośmiu sekcjach.
+	%	\item \textbf{Ogniwo, które dopisze Marcin, bo Axel nie może znaleźć}
+	\item \textbf{Żarówka energooszczędna} o mocy 21 W.
+	\item \textbf{Statyw} na którym zamontowana była lampa z możliwością regulacji wysokości.
+	\item \textbf{Potencjometr} DW 101 455
+	\item \textbf{Luksomierz} Voltcraft PL-110SM o dokładności rzędu $5\%$ mierzący w jednostkach $W/m^2$ lub BTU.
+	\item \textbf{Linijka} o długości 1m i najmniejszej podziałce = 0,1 cm.
+\end{itemize}
+
+
+\newpage
+
+%%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%
+\begin{thebibliography}{9}
+	
+	\bibitem[1]{1}
+	Z. Stęgowski,
+	\emph{Zeszyt A1 do ćwiczeń laboratoryjnych z fizyki}, Kraków, Akademia Górniczo Hutnicza im. Stanisława Staszica, dostępny na stronie:\\
+	\url{http://www.fis.agh.edu.pl/\~pracownia\_fizyczna/cwiczenia/71\_opis.pdf}
+	
+	
+	
+	\bibitem[2]{}
+	Jacek Tarasiuk,
+	\emph{Wykłady, Statystyka Inżynierska} , Kraków, Akademia Górniczo Hutnicza im. Stanisława Staszica, dostępny na stronie:\\
+	\url{http://home.agh.edu.pl/~tarasiuk/dydaktyka/index.php/statystykainzynierska}
+	
+	\bibitem[3]{3}
+	Andrzej Zięba,
+	\emph{Opracowanie danych pomiarowych}, Kraków, Akademia Górniczo Hutnicza im. Stanisława Staszica, dostępny na stronie:\\
+	\url{http://www.ftj.agh.edu.pl/zdf/danepom.pdf}
+	\label{statystyka}
+	
+	\bibitem[4]{4}
+	Andrzej Zięba,
+	\emph{Pracownia fizyczna wydziału Fizyki i techniki jądrowej AGH} , wydawnictwa AGH, Kraków, 1999\\
+	
+	
+	\bibitem[5]{5}
+	D.Halliday, R.Resnick
+	\emph{Fizyka dla studentów nauk przyrodniczych i technicznych.} Tom II, wydanie III, PWN, Warszawa 1974
+	
+\end{thebibliography}
+
+
+
+
+
+\end{document}
+
+
+
