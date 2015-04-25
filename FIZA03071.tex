@@ -116,7 +116,7 @@ oraz będą sobie równe (Rysunek \ref{rysunki_prazkow}a).\\
 
 W rzeczywistym eksperymencie trudno jest uzyskać szerokość szczeliny o szerokości znacznie mniejszej od długości fali i obserwujemy zjawisko dyfrakcji. Chcąc rozpatrzyć dyfrakcję na pojedynczej szczelinie o szerokości $a$ musimy podzielić ją na $n$ odcinków i policzyć superpozycję drgań padających z każdego z tych odcinków (przy założeniu że długość odcinków dąży do zera). Dalsze wyprowadzenie można poprowadzić na przykład przedstawiając zaburzenia od poszczególnych fragmentów szczeliny w postaci wektorów przesuniętych w fazie o stały czynnik. Superpozycja takich zaburzeń jest więc sumą tych wektorów. Powyższe rozumowanie zostało przedstawione krok po kroku w podręczniku \cite{5}. Ostatecznie otrzymujemy (przy ponownym założeniu że odleglość od ekranu jest znacznie większa od rozmiarów obrazu)\cite{1}:
 \begin{equation}
-I_{dyf}(x) = I_0\Big(\frac{\sin \alpha}{\alpha}\Big)^2\text{  \hspace{0.1cm} ,gdzie   \hspace{0.1cm}} \alpha=\frac{\pi a}{\lambda}\sin\theta \cong \frac{\pi a x}{\lambda L}
+I_{dyf}(x) = I_0\Big(\frac{\sin \alpha}{\alpha}\Big)^2\text{  \hspace{0.1cm}  gdzie   \hspace{0.1cm}} \alpha=\frac{\pi a}{\lambda}\sin\theta \cong \frac{\pi a x}{\lambda L}
 \label{wz_natezenie_dyfrakcyjne}
 \end{equation}\\\\
 
@@ -128,6 +128,17 @@ I(x) = I_0\Big(\frac{\sin \alpha}{\alpha}\Big)^2(\cos \beta)^2   \\
 \alpha \cong \frac{\pi a x}{\lambda L}
 \end{cases}
 \end{equation}
+
+dodaj prosze ten wzor dla jednej szczeliny:
+\begin{equation}
+	\label{pozycja_maks_jedna_szczelina_min}
+	x_{min} = m\frac{\lambda L}{d}
+\end{equation}
+\begin{equation}
+	\label{pozycja_maks_jedna_szczelina_max}
+	x_{max} = (m+\frac{1}{2})\frac{\lambda L}{d}
+\end{equation}
+
 
 \section{Aparatura}
 \begin{itemize}
@@ -149,7 +160,53 @@ I(x) = I_0\Big(\frac{\sin \alpha}{\alpha}\Big)^2(\cos \beta)^2   \\
 \end{figure}
 
 \newpage
+\section{Wyniki pomiarów}
+\subsection{Pojedyncza szczelina}
+Na wykresie \ref{jedna_szczelina_calosc} przedstawiono zależność natężenia światła od położenia detektora. Wykres jest zbiorem punktów pomiarowych połączonych krzywą gładką wygenerowaną przez program Gnuplot. W celu uwidocznienia położeń ekstremów narysowano wykres \ref{jedna_szczelina_log} z logarytmiczną skalą na osi Y. Odczytane maksima i minima przedstawiono w tabeli \ref{jedna_szczelina_tab_maks}. Korzystając ze wzorów \ref{pozycja_maks_jedna_szczelina_min} oraz \ref{pozycja_maks_jedna_szczelina_max} obliczono szerokość szczeliny $d$. Otrzymano cztery wyniki odpowiednio dla kolejnych maksimów i minimów. Oczywiście taka ilość wyników nie pozwala na posługiwanie się niepewnością typu $A$. Wyznaczono niepewność typu $B$ dla każdego wyniku korzystając z prawa przenoszenia niepewności.
+\begin{equation*}
+	u(d) = \sqrt{\left[\frac{m\lambda u(L)}{x} \right]^2 + \left[\frac{-m\lambda L u(x)}{x^2} \right]^2}
+\end{equation*}
+Powyższa niepewność jest tym większa im 
+\begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{\textwidth}
+			\fontsize{6}{8}\selectfont % zmniejszam czcionke
+			\centering
+			\resizebox{0.9\textwidth}{!}{\input{jedna_szczelina}}		
+			\caption{W zwykłej skali.}
+			\label{jedna_szczelina}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+          
+        \begin{subfigure}[b]{\textwidth}
+			\fontsize{6}{8}\selectfont % zmniejszam czcionke
+			\centering
+			\resizebox{0.9\textwidth}{!}{\input{jedna_szczelina_log}}	
+			\caption{W skali półlogarytmicznej}
+			\label{jedna_szczelina_log}
+        \end{subfigure}
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \caption{Wykres zależności natężenie światła $I$ od położenia detektora $x$.}\label{jedna_szczelina_calosc}
+\end{figure}
 
+\begin{table}[h!]
+\centering
+\caption{Położenia maksimów i minimów natężenia światła}
+	\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}\hline
+		Element obrazu dyfrakcyjnego & Położenie z lewej $x_l$ [mm] & Położenie z prawej $x_p$ [mm] & $x = \frac{x_p-x_l}{2}$ [mm] & Obliczona szerokość szczeliny $d$ [mm] \\ \hline
+		1 minimum & -3,0 & 2,9 & 2,95 & $0,02375$\\ \hline
+		1 maksimum boczne & -4,1 & 4,1 & 4,1 & $0,02563$ \\ \hline
+		2 minimum & -5,8 & 5,6 & 5,7 &  $0,02458$ \\ \hline
+		2 maksimum boczne & -7,0 & 6,9 & 6,95 & $0,02520$\\ \hline
+	\end{tabular}
+\label{jedna_szczelina_tab_maks}
+\end{table}
+
+
+
+\newpage
 %%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%
 \begin{thebibliography}{9}
 	
