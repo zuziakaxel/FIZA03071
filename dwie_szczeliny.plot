@@ -22,8 +22,8 @@ set format '$%g$'
 #autojustify
 set style data linespoints
 #arrows
-set arrow from 1434 to 1434,-50 nohead
-set label "m = 1" at 1.3-0.35,12.50 + 2.5
+#set arrow from 1434 to 1434,-50 nohead
+#set label "m = 1" at 1.3-0.35,12.50 + 2.5
 
 
 plot "dwie_szczeliny.dat" u 1:2 w linespoints ls 1 notitle, "jedna_szczelina.dat" u 1:2 w lines ls 2 notitle
