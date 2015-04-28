@@ -26,5 +26,5 @@ set style data linespoints
 #set label "m = 1" at 1.3-0.35,12.50 + 2.5
 
 
-plot "dwie_szczeliny.dat" u 1:2 w linespoints ls 1 notitle, "jedna_szczelina.dat" u 1:2 w lines ls 2 notitle
+plot "dwie_szczeliny.dat" u 1:2 w linespoints ls 1 notitle
 
