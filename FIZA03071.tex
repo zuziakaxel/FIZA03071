@@ -110,9 +110,16 @@ Dodatkowo jeżeli odległość ekranu od szczelin jest duża w porównaniu do wy
 I_{int}(x) = I_0\cos ^2 \Big(\frac{\pi bx}{L\lambda}\Big)
 \label{wz_natezenie_interferencja}
 \end{equation}
-Z powyższego wzoru bezpośredio wynika, że maksima natężenie będą występowały dla punktów o współrzędnych:\\
-$x_m = \frac{m\lambda L}{b}\ \ \ ,m=1,2,3,...$\\
-oraz będą sobie równe (Rysunek \ref{rysunki_prazkow}a).\\
+Z powyższego wzoru wynika, że ekstrema natężena będą występowały, gdy powyższa funkcja trygonometryczna będzie osiągać maksimum lub wartość zero (odpowiednio maksimum natężenia i minimum) stąd:\\
+\begin{equation}
+	\label{pozycja_maks_jedna_szczelina_max}
+	x_{max} = m\frac{\lambda L}{b}
+\end{equation}
+\begin{equation}
+	\label{pozycja_maks_jedna_szczelina_min}
+	x_{min} = (m+\frac{1}{2})\frac{\lambda L}{b}
+\end{equation}
+
 
 W rzeczywistym eksperymencie trudno jest uzyskać szerokość szczeliny o szerokości znacznie mniejszej od długości fali i obserwujemy zjawisko dyfrakcji. Chcąc rozpatrzyć dyfrakcję na pojedynczej szczelinie o szerokości $a$ musimy podzielić ją na $n$ odcinków i policzyć superpozycję drgań padających z każdego z tych odcinków (przy założeniu że długość odcinków dąży do zera). Dalsze wyprowadzenie można poprowadzić na przykład przedstawiając zaburzenia od poszczególnych fragmentów szczeliny w postaci wektorów przesuniętych w fazie o stały czynnik. Superpozycja takich zaburzeń jest więc sumą tych wektorów. Powyższe rozumowanie zostało przedstawione krok po kroku w podręczniku \cite{5}. Ostatecznie otrzymujemy (przy ponownym założeniu że odleglość od ekranu jest znacznie większa od rozmiarów obrazu)\cite{1}:
 \begin{equation}
@@ -129,15 +136,8 @@ I(x) = I_0\Big(\frac{\sin \alpha}{\alpha}\Big)^2(\cos \beta)^2   \\
 \end{cases}
 \end{equation}
 
-dodaj prosze ten wzor dla jednej szczeliny:
-\begin{equation}
-	\label{pozycja_maks_jedna_szczelina_min}
-	x_{min} = m\frac{\lambda L}{d}
-\end{equation}
-\begin{equation}
-	\label{pozycja_maks_jedna_szczelina_max}
-	x_{max} = (m+\frac{1}{2})\frac{\lambda L}{d}
-\end{equation}
+
+
 
 
 \section{Aparatura}
